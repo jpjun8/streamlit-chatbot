@@ -4,3 +4,4 @@ langchain
 nltk
 scikit-learn
 stop-words
+llama-index
