@@ -6,10 +6,12 @@ from openai import OpenAI
 # from llama_index import VectorStoreIndex, ServiceContext, Document, SimpleDirectoryReader
 # from llama_index.llms import OpenAI
 
-client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+# client = OpenAI(api_key=st.session_state['api_key'])
 
 # Main function to generate responses from OpenAI's API, not considering indexed data
 def generate_response(prompt, history, model_name, temperature):
+    client = OpenAI(api_key=st.session_state['api_key'])
+
     # Fetching the last message sent by the chatbot from the conversation history
     chatbot_message = history[-1]['content']
 
@@ -43,6 +45,8 @@ def generate_response(prompt, history, model_name, temperature):
     yield {"type": "response", "content": full_response}
 
 def generate_response_index(prompt, history, model_name, temperature, chat_engine):
+    client = OpenAI(api_key=st.session_state['api_key'])
+
     # Fetching the last message sent by the chatbot from the conversation history
     chatbot_message = history[-1]['content']
 

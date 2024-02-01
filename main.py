@@ -19,7 +19,7 @@ get_user_config()
 clear_button()
 download_button()
 
-client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+# client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # Setting up environment variables for OpenAI API key
 if 'api_key' in st.session_state['api_key']:
