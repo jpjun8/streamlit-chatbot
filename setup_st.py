@@ -96,9 +96,9 @@ def download_button():
 def get_user_config():
     # Define a few AI models the user can choose from.
     model_options = {
-        "GPT-3.5 Turbo (16K tokens)": "gpt-3.5-turbo-16k-0613", # Recommended as it has a 16K token limit, much higher than the other two. This allows longer 'memory recall'.
+        "GPT-3.5 Turbo (16K tokens)": "gpt-3.5-turbo-0125", # Recommended as it has a 16K token limit, much higher than the other two. This allows longer 'memory recall'.
         "GPT-3.5 Turbo": "gpt-3.5-turbo", # Fewer token version of above - not recommended
-        "GPT-4": "gpt-4" # Latest model from OpenAI. Recommended for complex chatbots, though has a lower token limit, higher token usage cost, and slower returns.
+        "GPT-4 0125 (preview)": "gpt-4-0125-preview" # Latest model from OpenAI. Recommended for complex chatbots, though has a lower token limit, higher token usage cost, and slower returns.
     }
 
     # Display button choices in the sidebar of the app for the user to pick their desired model from the ones just defined.
